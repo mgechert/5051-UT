@@ -67,14 +67,14 @@ namespace UnitTests.Models
                 ID = "bogus"
             };
 
-            // Remeber the old ID
+            // Remember the old ID
             var myTestID = myTest.ID;
 
             // Act
             var result = myTest.Update(myUpdate);
 
             // Assert
-            //Assert.AreEqual(myTestID, myTest.ID);
+            Assert.AreEqual(myTestID, myTest.ID);
         }
     }
 }

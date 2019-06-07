@@ -59,5 +59,21 @@ namespace UnitTests.Models
             Assert.IsNotNull(result);
         }
 
+        [TestMethod]
+        public void ReportViewModel_Set_LogViewModel_Should_Pass()
+        {
+            // Arrange
+            var myTest = new ReportViewModel();
+            // Need a LogViewModel different from the default
+            LogViewModel logViewModel = new LogViewModel();
+            logViewModel.LogList.Add(new LogModel(){ PhoneID = "NikePhone+" });
+
+            // Act
+            myTest.LogViewModel = logViewModel;
+            var result = myTest.LogViewModel.LogList;
+
+            // Assert
+            Assert.AreEqual("NikePhone+", result[0].PhoneID);
+        }
     }
 }

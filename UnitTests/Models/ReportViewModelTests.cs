@@ -20,7 +20,7 @@ namespace UnitTests.Models
         }
 
         [TestMethod]
-        public void ReportViewModel_Get_Default_Should_Pass()
+        public void ReportViewModel_Get_NumberOfUsers_Should_Pass()
         {
             // Arrange
             var myTest = new ReportViewModel();
@@ -33,7 +33,7 @@ namespace UnitTests.Models
         }
 
         [TestMethod]
-        public void ReportViewModel_Set_Default_Should_Pass()
+        public void ReportViewModel_Set_NumberOfUsers_Should_Pass()
         {
             // Arrange
             var myTest = new ReportViewModel();
